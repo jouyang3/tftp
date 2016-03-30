@@ -1,10 +1,11 @@
+#ifndef PACKET_H
+#define PACKET_H
+
 #include <stdlib.h>
+#include <stdint.h>
 
-typedef uint32 HOST;
+typedef enum{
+    NOOP, RRQ, WRQ, DATA, ACK, ERROR
+} PACKET_TYPE;
 
-typedef struct {
-    HOST sender;
-    HOST recver;
-    uint32 seqNum;
-} CONNECTION;
-
+#endif
